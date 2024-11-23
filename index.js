@@ -18,6 +18,10 @@ app.use(bodyParser.json());
 app.use("/user", userRoutes);
 app.use("/polls", pollRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Polling system backend");
+});
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URL, {
