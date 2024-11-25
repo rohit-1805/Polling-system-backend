@@ -15,10 +15,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use("/user", userRoutes);
-app.use("/polls", pollRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/polls", pollRoutes);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Polling system backend");
 });
 
